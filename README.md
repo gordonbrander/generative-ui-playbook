@@ -4,7 +4,7 @@ Authors: Gordon Brander
 
 A collection of theories, patterns, tricks, and intuitions about generative UI. Begins with high-level theory, and works its way down to pragmatic notes on practice.
 
-# Theory
+# The theory behind generative systems
 
 ## Generative UI should be capable of emergence
 
@@ -168,6 +168,8 @@ When observing an ecosystem, ask:
 - How is the variety generated?
 - Variety is limited by inputs. Where are the inputs? What limits them?
 
+# Generative UI in practice
+
 ## Find the building blocks
 
 Generative systems are made of mechanisms, or building blocks, or modules.
@@ -188,15 +190,17 @@ More reading:
 
 - [Verbs that can act on many objects](https://gordonbrander.com/pattern/verbs-that-can-act-on-many-objects/)
 
-## Carefully selected ingredients, rules, randomness
+## Carefully selected ingredients + rules + randomness
 
-Garbage in, garbage out. The quality of the meal depends upon the quality of the ingredients. Take a look at a successful generative system and you’ll see carefully crafted ingredients:
+A good generating system is often just carefully selected ingredients, rules, and randomness.
+
+The quality of the meal depends upon the quality of the ingredients. Garbage in, garbage out. Take a look at a successful generative system and you’ll see carefully crafted components:
 
 - Every tarot card has a rich tapestry of symbols, laden with multiple meanings. These symbols interact in rich ways when you combine different cards and layouts.
 - Each [Oblique Strategy](https://en.wikipedia.org/wiki/Oblique_Strategies) is calibrated to provoke maximum generative ambiguity.
 - Lego colors and shapes are carefully chosen to work together and combine to make interesting structures.
 
-A good generating system is often just carefully selected ingredients, rules, and randomness. Ingredients and rules provide guidance, randomness creates surprise.
+Ingredients and rules provide guidance, randomness creates surprise.
 
 ## No wrong answers
 
@@ -346,7 +350,7 @@ More reading:
 
 - [Notes are conversations across time](https://subconscious.substack.com/p/notes-are-conversations-across-time)
 
-# Generative AI
+# Working with generative AI
 
 ## Designing with LLMs
 
@@ -354,21 +358,24 @@ More reading:
 - Think about what’s in
 - High locality
 
-## LLM as god/oracle
+## LLM as godlike oracle
 
-Lots of AI literature conceives of AI as an oracle. You ask the oracle a question, it delivers an answer.
+A common metaphor for AI is that of a godlike oracle. You ask the oracle a question, it delivers an answer.
 
-This metaphor for AI is one of the least interesting or generative ways to see AI because:
+Q: “What is the meaning of life?”
+A: 42
+
+This metaphor for AI is not very interesting, because:
 
 - It’s feed-forward
 - It’s convergent
-- It doesn’t reflect where AI is right now
+- It doesn’t reflect what LLMs actually do today
 
 ## LLM as autonomous agent
 
 The hot new thing is AI agents, but agency requires feedback, and LLMs are feed-forward systems. No feedback, no agency.
 
-At the sam time, [feedback is all you need for agency to emerge](https://subconscious.substack.com/p/feedback-is-all-you-need). A thermostat has limited agency through feedback with its environment. Likewise, an LLM can be part of an agenticsystem by introducing feedback.
+At the same time, [feedback is all you need for agency to emerge](https://subconscious.substack.com/p/feedback-is-all-you-need). A thermostat has limited agency through feedback with its environment. Likewise, an LLM can be part of an agenticsystem by introducing feedback.
 
 In 2024, useful autonomous agents may be outside the adjacent possible. A system’s feedback loops evolve over time through experiences within its environment. This process starts from the bottom-up, from simple to complex, from weeds, to bushes, to rainforests. So, the first true AI agents may look more like a virus - simple replicators.
 
