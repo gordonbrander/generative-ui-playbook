@@ -168,7 +168,7 @@ When observing an ecosystem, ask:
 - How is the variety generated?
 - Variety is limited by inputs. Where are the inputs? What limits them?
 
-# Generative UI in practice
+# Generative systems in practice
 
 ## Find the building blocks
 
