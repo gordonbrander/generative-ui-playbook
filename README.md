@@ -4,11 +4,11 @@ Authors: Gordon Brander
 
 A collection of theories, patterns, tricks, and intuitions about generative UI. Begins with high-level theory, and works its way down to pragmatic notes on practice.
 
-# The theory behind generative systems
+# The theory of generative systems
 
-## Generative UI should be capable of emergence
+## Emergence
 
-Emergence is when a system’s behavior is more than the sum of its parts. 
+Generative UI should be capable of emergence. Emergence is when a system’s behavior is more than the sum of its parts. 
 
 Emergent systems exhibit:
 
