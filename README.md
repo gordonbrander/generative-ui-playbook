@@ -355,11 +355,15 @@ More reading:
 
 ## Designing with LLMs
 
+There are a few things to be aware of when working with LLMs:
+
+**LLMs pay attention to what’s in the context window**. 
+
 - Context window
 - Think about what’s in
 - High locality
 
-## Text is composable
+## Text is composable, so just use text
 
 An LLM can be seen as a function of `string -> string`. This has a few important implications:
 
