@@ -18,17 +18,17 @@ Emergent systems exhibit:
 
 Examples of emergence:
 
-- Complex coordination emerges from ants laying down pheromone trails
-- Price signals emerge from market trades
-- Consciousness emerges from networks of neurons
+- Complex coordination emerging from ants laying down pheromone trails
+- Price signals emerging from market trades
+- Consciousness emerging from networks of neurons
 
 Required ingredients for emergence:
 
-- Mechanisms (or building blocks, modules, subassemblies) make up the “stuff” of systems
-- Rules (or interfaces) define how mechanisms may be combined
-- Feedback means the next step is the recursive function of new information plus the sum of all previous steps.
+- Mechanisms (building blocks, modules, subassemblies), that up the “stuff” of the system
+- Rules (or interfaces), defining how mechanisms are combined
+- Feedback, where the next step is the recursive function of new information plus the sum of all previous steps.
 
-In some some sense emergence is the product of these ingredients. There are no “hidden variables”. However, unlike most systems, the whole is *not* just the sum of the parts. Emergent systems have “state”, or “memory” that builds up through feedback with their environment. The particular history of the system is the irreducible “magic” ingredient that creates emergent behavior.
+In some some sense, emergence is just the product of these ingredients. There are no extra “hidden” variables. Yet, unlike most systems, the whole is *not* reducible to the sum of the parts. That’s because emergent systems have a “state”, or “memory” that builds up via feedback within their environment. The particular history of the system is the irreducible “magic” ingredient that generates emergent behavior.
 
 > Emergence is above all a product of coupled, context-dependent interactions. Technically these interactions, and the resulting system, are nonlinear. (John H. Holland, 1998, Emergence)
 
@@ -44,9 +44,11 @@ When observing an emergent system, watch for these important features:
 
 More reading:
 
-- Emergence, John H. Holland, 1998
+- [Emergence](https://www.amazon.com/Emergence-Chaos-Order-Helix-Books/dp/0738201421), John H. Holland, 1998
+- [Thinking in Systems](https://www.amazon.com/Thinking-Systems-Donella-H-Meadows/dp/1603580557), Donella Meadows, 2008
+- [Complexity, a guided tour](https://www.amazon.com/Complexity-Guided-Tour-Melanie-Mitchell/dp/0199798109), Melanie Mitchell, 2011
 - [More is Different](https://www.tkm.kit.edu/downloads/TKM1_2011_more_is_different_PWA.pdf), Philip Anderson, 1972
-- [50 Years of More is Different](https://www.nature.com/articles/s42254-022-00483-x)
+- [50 Years of More is Different](https://www.nature.com/articles/s42254-022-00483-x), Steven Strogatz, Sara Walker, et al, 2022
 
 ## Evolution 
 
@@ -56,9 +58,7 @@ Evolution emerges in any system with:
 - Memory
 - Selection
 
-You can look at many different systems through this lens, including social networks and multiplayer software.
-
-It’s not an ecosystem if it doesn’t evolve.
+You can look at many different systems through this lens, including social networks and multiplayer software. It’s not an ecosystem if it doesn’t evolve.
 
 Questions:
 
@@ -68,28 +68,28 @@ Questions:
 
 ## Composability and compositionality
 
-Emergence arises from mechanisms combined according to a set of rules. We call this composition, or in mathematics, *compositionality*. 
+Emergence arises from mechanisms combined according to some rules. We call this *composition*, or in mathematics, *compositionality*. 
 
 > Compositionality is the principle that a system should be designed by composing together smaller subsystems, and reasoning about the system should be done recursively on its structure. (Jules Hedges, [On Compositionality](https://julesh.com/2017/04/22/on-compositionality/))
 
-Some related concepts are modularity and reductionism. However compositionality takes things a step further. It is a formal mathematical property, requiring composition *without side-effects*.
+Other related concepts are modularity and reductionism. However compositionality takes things a step further. It is a formal mathematical property, requiring composition *without side-effects*.
 
 > More generally, I claim that the opposite of compositionality is emergent effects. The common definition of emergence is a system being “more than the sum of its parts”, and so it is easy to see that such a system cannot be understood only in terms of its parts, i.e. it is not compositional. Moreover I claim that non-compositionality is a barrier to scientific understanding, because it breaks the reductionist methodology of always dividing a system into smaller components and translating explanations into lower levels. (Jules Hedges, [On Compositionality](https://julesh.com/2017/04/22/on-compositionality/))
 
 We said earlier that we *want* emergence, so what gives? Well, emergence is difficult to reason about using our limited symbolic cognition.
 
-> Here we see that emergence in rule-governed systems comes close to being the obverse of reduction. (John H. Holland, 1998, Emergence)
-
 Compositionality can be a useful property for parts of a system that require *proofs* of particular properties. Compositionality is easily treatable through mathematics precisely *because* it excludes the messy nonlinear effects of emergence.
 
-How do you get it? Avoid state, compose pure functions.
+> Here we see that emergence in rule-governed systems comes close to being the obverse of reduction. (John H. Holland, 1998, Emergence)
+
+How do you get compositionality? Avoid state, avoid mutation, compose pure functions.
 
 Know where in the system you want emergence, and where in the system you want compositionality.
 
 More reading:
 
-- [On Compositionality](https://julesh.com/2017/04/22/on-compositionality/)
-- [Compositional components, emergent protocols](https://subconscious.substack.com/p/compositionality)
+- [On Compositionality](https://julesh.com/2017/04/22/on-compositionality/), Jules Hedges, 2017
+- [Compositional components, emergent protocols](https://subconscious.substack.com/p/compositionality), Gordon Brander
 
 ## Multiple levels of composition
 
