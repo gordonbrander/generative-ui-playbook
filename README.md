@@ -329,6 +329,7 @@ Designing generative systems requires a special kind of mindset - a gardening mi
 
 More reading:
 
+- [Composers as Gardeners](https://www.edge.org/conversation/brian_eno-composers-as-gardeners), Brian Eno
 - [Seeing Like a State](https://www.amazon.com/Seeing-like-State-Certain-Condition/dp/0300078153), James C Scott, 1999
 
 ## If the error rate is too high, tighten the feedback loop
