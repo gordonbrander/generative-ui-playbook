@@ -190,7 +190,7 @@ More reading:
 
 - [Verbs that can act on many objects](https://gordonbrander.com/pattern/verbs-that-can-act-on-many-objects/)
 
-## Carefully selected ingredients + rules + randomness
+## Carefully select ingredients + rules + randomness
 
 A good generating system is often just carefully selected ingredients, rules, and randomness.
 
