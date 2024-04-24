@@ -430,15 +430,15 @@ For example, a generative grammar could be used to generate the outline of a sto
 
 
 
-## Tools
+# Tools and techniques
 
-State machines
+## State machines
 
-Generative Grammars
+## Generative Grammars
 
-LLM
+## LLMs
 
-## More Reading
+# More Reading
 
 - Systems Generating Systems, Christopher Alexander
 - Computational Design Thinking, CRC Press
