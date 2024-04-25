@@ -595,6 +595,30 @@ https://github.com/instructor-ai/instructor-js
 
 ## State machines
 
+## Storylets
+
+[Storylets](https://emshort.blog/2019/11/29/storylets-you-want-them/) are a way of organizing procedurally generated narrative.
+
+Components of a storylet:
+
+- An atomic piece of content (line, paragraph, section, animation, cutscene...)
+- Prerequisites for the content to play
+- Effects on the world state after it plays
+
+Note that this structure can be used for more than narrative. It neatly combines atomic designed units, algorithmic guidance, user input, and randomness to enable a wide range of applications.
+
+Lots of games use this basic structure, and it’s flexible enough to support many semi-open story structures, including gauntlets, branching and bottlenecks, “sorting hats”, eternal return, and more.
+
+Examples of games that use Storylets:
+
+- [Reigns](https://www.reignsgame.com/reigns)
+
+More reading:
+
+- [Storylets: You Want Them](https://emshort.blog/2019/11/29/storylets-you-want-them/)
+- [Survey of storylet design](https://emshort.blog/2019/01/06/kreminski-on-storylets/)
+- [Sketching a map of the storylets design space](https://mkremins.github.io/publications/Storylets_SketchingAMap.pdf), Max Kreminski, 2018
+
 ## Procedural Geometry
 
 Abstract principle: begin with mostly noise and use specific mathematical operations to extract signal.
