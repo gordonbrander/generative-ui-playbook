@@ -597,6 +597,8 @@ https://github.com/instructor-ai/instructor-js
 
 ## Procedural Geometry
 
+Abstract principle: begin with mostly noise and use specific mathematical operations to extract signal.
+
 ### Noise and Randomness
 
 (psuedo)randomness is the fundamental starting point for any computational process relying on variety. Mixing multiple types of noise together at different scales and parameterising them is a common way to disguise the obvious patterns of algorithmic noise.
@@ -628,6 +630,17 @@ This video provides an excellent overview of the technique in practice and the s
 This allows for far deeper control over shape generation and deeply parametric design. Tools like [womp](https://womp.com/index) and people like [Inigo Quilez](https://iquilezles.org/articles/distfunctions/) (of Pixar fame) are pushing this as the next-generation approach. 
 
 SDFs are also finding use in [parametric font-rendering](https://www.youtube.com/watch?v=SO83KQuuZvg). Importantly, SDFs can be re-topologized to mesh based geometry if needed. 
+
+#### Diffusion Models
+
+Diffusion models have risen to popularity for image, video and audio geneation but the same principle also tranfers to SDF geometry. Gaussian splats, voxels and SDFs can be used to generate 3D models on demand, albet with compromises to the rendering performance.
+
+https://x.com/eric_heitz/status/1780979459790610503
+https://x.com/eric_heitz/status/1780979462256931023
+
+![](https://i.redd.it/q2vo4eqkanzb1.gif)
+
+https://lumalabs.ai/
 
 ## Parametric Design & Geometry Nodes
 
