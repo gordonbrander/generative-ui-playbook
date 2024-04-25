@@ -579,12 +579,12 @@ https://github.com/instructor-ai/instructor-js
 
 # More reading
 
-- Systems Generating Systems, Christopher Alexander
-- Computational Design Thinking, CRC Press
+- [Systems Generating Systems](https://patterns.architexturez.net/doc/az-cf-173046), Christopher Alexander, 1968
+- [Computational Design Thinking](https://www.wiley.com/en-us/Computational+Design+Thinking%3A+Computation+Design+Thinking-p-9780470665701), Achim Menges, Sean Ahlquist, 2011
 - [Procedural Generation in Game Design](https://www.amazon.com/Procedural-Generation-Design-Tanya-Short/dp/1498799191)
 - [Procedural Storytelling in Game Design](https://www.amazon.com/Procedural-Storytelling-Design-Tanya-Short/dp/1138595314)
-- https://emshort.blog/
-- https://galaxykate0.tumblr.com/post/139774965871/so-you-want-to-build-a-generator
+- [Emily Short's Interactive Storytelling](https://emshort.blog/)
+- [So you want to build a generator](https://galaxykate0.tumblr.com/post/139774965871/so-you-want-to-build-a-generator)
 
 # Meta
 
