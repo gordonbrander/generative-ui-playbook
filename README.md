@@ -154,7 +154,7 @@ More reading:
 - [Stepping stones in possibility space](https://subconscious.substack.com/p/stepping-stones-in-possibility-space)
 - [Why Greatness Cannot Be Planned](https://www.amazon.com/Why-Greatness-Cannot-Planned-Objective/dp/3319155237), Kenneth O. Stanley, Joel Lehman, 2015
 
-## Requisite Variety
+## Requisite variety
 
 *[Variety](https://en.wikipedia.org/wiki/Variety_(cybernetics))* is a measure of how many different states a system can produce... literally by just counting them.
 
@@ -251,7 +251,7 @@ More reading:
 - [Alphabets of emergence](https://subconscious.substack.com/p/provoking-emergence-with-alphabets)
 - [Alphabets](https://gordonbrander.com/pattern/alphabets/)
 
-## Small Alphabets
+## Small alphabets
 
 When designing alphabets for emergence, constrain the alphabet, but don't constrain what may be written with it.
 
@@ -280,34 +280,32 @@ A generative system can be emergent, and even open-ended without being interesti
 
 What makes a generative system interesting? **Perceptual uniqueness**.  You’ll know it when you see it.
 
-## Control vs. Interest
+## Control vs. interest
 
 In general:
 
-1. putting a lower-bound on quality will retrict variety
-  - If the output is "always equally interesting" the observer attenuates to it
-2. increasing depth _or_ breadth reduces control but increases interest
-  - Minecraft has voxels and finite block types for a reason
+1. putting a lower-bound on quality will restrict variety. If the output is "always equally interesting" the observer attenuates to it.
+2. Increasing depth _or_ breadth reduces control but increases interest. Minecraft has voxels and finite block types for a reason.
 
-## Escaping the Oatmeal with Archetypes
+## Escaping the oatmeal with archetypes
 
-Assuming you generate a valid output, the cause of the oatmeal problem is that the observer sees "the shape of the algorithm" at work rather than the output itself. This is visible in classic perlin-noise based terrain generation:
+Assuming you generate a valid output, the cause of the oatmeal problem is that the observer sees "the shape of the algorithm" at work rather than the output itself. This is visible in classic Perlin-noise based terrain generation:
 
 ![](https://devforum-uploads.s3.dualstack.us-east-2.amazonaws.com/uploads/original/4X/0/4/8/0480e817c4b377c1dc603991f359b930e042686e.jpeg)
 
-Every hill, valley and coast feel the same despite actually being unique. By contrast, modern terrain generation (using Houdini) has clear archetypes we recognize from the real world with discenable "locations" on them:
+Every hill, valley and coast feel the same despite actually being unique. By contrast, modern terrain generation (using Houdini) has clear archetypes we recognize from the real world with discernible "locations" on them:
 
 ![](https://i.vimeocdn.com/video/778256694-6333bffc7598ce475642aa2bcfa3ea120c8f20a3b6e66b15c36f18f5e51d6680-d?f=webp)
 
 The goal is to create outputs from a generative system that have "personality". Each should be unique but _also_ mappable into a taxonomy by a willing scientist. When composing an interesting song there must be a balance of repetition and variation, tension and release. Generative composition is no different. The taxonomy of options forms due to feedback through intentionally designed channels of the system, each with varying dynamics.
 
-## Blending Dynamics
+## Blending dynamics
 
-You can produce archetype-like behaviours in a generative system by mixing different dynamics. For example, perlin noise alone makes for relatively uninteresting terrain but with the addition of erosion the landscape becomes cohesive:
+You can produce archetype-like behaviors in a generative system by mixing different dynamics. For example, Perlin noise alone makes for relatively uninteresting terrain but with the addition of erosion the landscape becomes cohesive:
 
 ![](https://www.wysilab.com/OnLineDocumentation/Nodes/images/MountainErosion.gif)
 
-In this case, we have one dynamic acting per-texel (perlin noise) and one dynamic acting across the entire heightmap iteratively in a cellular automata (erosion). Operating across different scales and dimensions of the problem space allows for patterns that appear organic.
+In this case, we have one dynamic acting per-texel (Perlin noise) and one dynamic acting across the entire heightmap iteratively in a cellular automata (erosion). Operating across different scales and dimensions of the problem space allows for patterns that appear organic.
 
 Aside from scale and dimension, dynamics can also differ in shape. Consider a smooth vs. spiky curve:
 
@@ -321,7 +319,7 @@ You can gain an intuition for a generating system by creating scripts that gener
 
 > Years ago when working on a project with challenging color palette I did the craziest thing and just listed all possible color combinations and then manually selected the best ones. Turns out it was 10x faster than hunting bad cases one by one or trying to come up with an algo. https://twitter.com/marcinignac/status/1484211214477627392
 
-## Coarse-grained vs fine grained
+## Coarse-grained vs fine-grained
 
 What if your generative system isn’t “smart enough” and keeps producing broken combinations? It might be that your generative system doesn’t have requisite variety to do what you want. Maybe you’re overshooting?
 
@@ -336,7 +334,7 @@ More reading:
 - [Evolutionary Design by Computers](https://www.amazon.com/Evolutionary-Design-Computers-Peter-Bentley/dp/155860605X).
 - [Creative Evolutionary Systems](https://www.amazon.com/Creative-Evolutionary-Kaufmann-Artificial-Intelligence/dp/1558606734)
 
-## Abstract Peak to the Concrete Valley (Progressive Refinement)
+## Abstract peak to concrete valley (progressive refinement)
 
 Many procedural generation systems fail because they attempt too much in a single step. Dwarf Fortress generates an world with a [complete historical record](https://dwarffortresswiki.org/index.php/World_generation#History_length) and does so by _simulating the entire thing_ (with some smoke and mirrors). 
 
@@ -414,7 +412,7 @@ Instead of looking at a generative system and saying “it’s not good enough�
 
 The brilliance of Google’s “10 Blue Links” is that it allows for zero-friction feedback. If we  Google doesn’t have to get it right, it just has to get it right in 10 tries! And if everyone clicks the third link from the top, well, Google can bump it up.
 
-Imagine if Google only had “I’m Feeling Lucky”? That would be pretty frustrating! Yet this is how most people think about AI and generative systems. “Get it right in one try” will always be unlikely. Instead, try to find a low-friction ways to increase feedfback.
+Imagine if Google only had “I’m Feeling Lucky”? That would be pretty frustrating! Yet this is how most people think about AI and generative systems. “Get it right in one try” will always be unlikely. Instead, try to find a low-friction ways to increase feedback.
 
 On the other hand, if the system is not generating enough variety, it may mean you’re *too* synchronized. Loosen up that feedback loop.
 
@@ -465,7 +463,7 @@ This metaphor for AI is not very interesting, because:
 
 The hot new thing is AI agents, but agency requires feedback, and LLMs are feed-forward systems. No feedback, no agency.
 
-At the same time, [feedback is all you need for agency to emerge](https://subconscious.substack.com/p/feedback-is-all-you-need). A thermostat has limited agency through feedback with its environment. Likewise, an LLM can be part of an agenticsystem by introducing feedback.
+At the same time, [feedback is all you need for agency to emerge](https://subconscious.substack.com/p/feedback-is-all-you-need). A thermostat has limited agency through feedback with its environment. Likewise, an LLM can be part of an agentic system by introducing feedback.
 
 In 2024, useful autonomous agents may be outside the adjacent possible. A system’s feedback loops evolve over time through experiences within its environment. This process starts from the bottom-up, from simple to complex, from weeds, to bushes, to rainforests. So, the first true AI agents may look more like a virus - simple replicators.
 
@@ -483,6 +481,8 @@ Another way to see LLMs is as creative tools, like
 
 ## LLM as Artificial Intuition
 
+LLMs are more like intuition than intelligence.
+
 - Vibes-based computing
 - Software is getting softer
 
@@ -498,7 +498,7 @@ Another way to use an LLM is as a touch-up or synthesis pass.
 
 For example, a generative grammar could be used to generate the outline of a story, and an LLM used to expand that outline into a few paragraphs. This gives you a high degree of control over ingredients and how they are combined. At the same time, generative grammars lack the high-dimensional structure of natural language, It can be difficult to design them in ways that generate natural-sounding paragraphs and sentences, but LLMs are great at this kind of synthesis.
 
-## Think Backwards
+## Think backwards
 
 An LLM outputs whatever logically follows from its input. Due to the personification of instructor-tuned models we tend to speak to them conversationally but this often produces poor results. Instead, think of LLMs like those "what comes next in the sequence" puzzles:
 
@@ -506,7 +506,7 @@ An LLM outputs whatever logically follows from its input. Due to the personifica
 
 A good prompt sketches out the steps of the pattern with minimal distraction surrounding them. This is why examples are so effective for LLMs, they provide evidence of a pattern to extend. Good prompting means thinking backwards from the intended output to produce the most compact set of tokens that will logically lead to it.
 
-## Do One Thing At A Time
+## Do one thing at a time
 
 Instruction-tuned LLMs struggle with open problem descriptions. More capable models can deal with more ambiguity but the best results come from extremely clear problem specification (much like the real world).
 
@@ -528,7 +528,7 @@ Formulate each suggestion into a research question (AKA hypothesis)
 
 👍 This is a textual program that generates text, not a question.
 
-## E2E Interface Generation Example (Context Manipulation)
+## E2E interface generation example (context manipulation)
 
 It can be helpful to throw away the context mid-generation and tightly manipulate it through many passes. For example, let's make an app for this request:
 
@@ -553,11 +553,11 @@ https://github.com/instructor-ai/instructor-js
 
 ## State machines
 
-## Generative Grammars
+## Generative grammars
 
 ## LLMs
 
-# More Reading
+# More reading
 
 - Systems Generating Systems, Christopher Alexander
 - Computational Design Thinking, CRC Press
