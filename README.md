@@ -280,6 +280,41 @@ A generative system can be emergent, and even open-ended without being interesti
 
 What makes a generative system interesting? **Perceptual uniqueness**.  You’ll know it when you see it.
 
+## Control vs. Interest
+
+In general:
+
+1. putting a lower-bound on quality will retrict variety
+  - If the output is "always equally interesting" the observer attenuates to it
+2. increasing depth _or_ breadth reduces control but increases interest
+  - Minecraft has voxels and finite block types for a reason
+
+## Escaping the Oatmeal with Archetypes
+
+Assuming you generate a valid output, the cause of the oatmeal problem is that the observer sees "the shape of the algorithm" at work rather than the output itself. This is visible in classic perlin-noise based terrain generation:
+
+![](https://devforum-uploads.s3.dualstack.us-east-2.amazonaws.com/uploads/original/4X/0/4/8/0480e817c4b377c1dc603991f359b930e042686e.jpeg)
+
+Every hill, valley and coast feel the same despite actually being unique. By contrast, modern terrain generation (using Houdini) has clear archetypes we recognize from the real world with discenable "locations" on them:
+
+![](https://i.vimeocdn.com/video/778256694-6333bffc7598ce475642aa2bcfa3ea120c8f20a3b6e66b15c36f18f5e51d6680-d?f=webp)
+
+The goal is to create outputs from a generative system that have "personality". Each should be unique but _also_ mappable into a taxonomy by a willing scientist. When composing an interesting song there must be a balance of repetition and variation, tension and release. Generative composition is no different. The taxonomy of options forms due to feedback through intentionally designed channels of the system, each with varying dynamics.
+
+## Blending Dynamics
+
+You can produce archetype-like behaviours in a generative system by mixing different dynamics. For example, perlin noise alone makes for relatively uninteresting terrain but with the addition of erosion the landscape becomes cohesive:
+
+![](https://www.wysilab.com/OnLineDocumentation/Nodes/images/MountainErosion.gif)
+
+In this case, we have one dynamic acting per-texel (perlin noise) and one dynamic acting across the entire heightmap iteratively in a cellular automata (erosion). Operating across different scales and dimensions of the problem space allows for patterns that appear organic.
+
+Aside from scale and dimension, dynamics can also differ in shape. Consider a smooth vs. spiky curve:
+
+![](https://qph.cf2.quoracdn.net/main-qimg-e32ec9ff7c6a441772eb5b0d780629f2)
+
+Mixing different shapes, scales and dimensions together results in a kind of "constrained chaos" confined to a particular manifold of the generative space.
+
 ## Permute, permute, permute
 
 You can gain an intuition for a generating system by creating scripts that generate many permutations, giving you a sample of the possibility space.
@@ -300,6 +335,42 @@ More reading:
 
 - [Evolutionary Design by Computers](https://www.amazon.com/Evolutionary-Design-Computers-Peter-Bentley/dp/155860605X).
 - [Creative Evolutionary Systems](https://www.amazon.com/Creative-Evolutionary-Kaufmann-Artificial-Intelligence/dp/1558606734)
+
+## Abstract Peak to the Concrete Valley (Progressive Refinement)
+
+Many procedural generation systems fail because they attempt too much in a single step. Dwarf Fortress generates an world with a [complete historical record](https://dwarffortresswiki.org/index.php/World_generation#History_length) and does so by _simulating the entire thing_ (with some smoke and mirrors). 
+
+Caves of Qud generates similar histories through a layered symbolic expansion. [This presentation](https://ubm-twvideo01.s3.amazonaws.com/o1/vault/gdc2019/presentations/Grinblat_Jason_End-to-End_Procedural_Generation.pdf) covers their approach in detail but here is a brief sketch:
+
+We take many iterative passes to go from the Abstract Peak to the Concrete Valley:
+
+![alt text](image.png)
+
+```
+This town was created when the founder ?name discovered it.
+This town was created when the founder, Jessica, discovered it while doing ?something.
+This town was created when the founder, Jessica, discovered it while gathering water and saw ?something.
+This town ?name was created when the founder, Jessica, discovered it while gathering water and saw a mole hill.
+This town Moleville was created when the founder, Jessica, discovered it while gathering water and saw a mole hill.
+```
+
+Each time we append more information we have the choice of drawing entities from the existing pool or generating new ones or clarifying details. Currently we know this town:
+
+1. has a source of water
+2. has a mole hill
+3. is called Moleville
+4. has a founder named Jessica
+
+When we come to generate the actual physical layout of this town, we might take a generic approach and then refine using these details:
+
+1. spawn a point of interest placeholder
+2. spawn 4 unlabelled houses
+3. spawn a pond
+4. add rooms to houses by subdividing
+5. replace the point of interest with a molehill
+6. label the house nearesr the point of interest "Jessica's house"
+
+When the player arrives here, it will seem like this village organically formed, because it did!
 
 ## Cheat
 
@@ -362,6 +433,7 @@ There are a few things to be aware of when working with LLMs:
 - Context window
 - Think about what’s in
 - High locality
+- Signal vs. noise
 
 ## Text is composable, so just use text
 
@@ -426,9 +498,56 @@ Another way to use an LLM is as a touch-up or synthesis pass.
 
 For example, a generative grammar could be used to generate the outline of a story, and an LLM used to expand that outline into a few paragraphs. This gives you a high degree of control over ingredients and how they are combined. At the same time, generative grammars lack the high-dimensional structure of natural language, It can be difficult to design them in ways that generate natural-sounding paragraphs and sentences, but LLMs are great at this kind of synthesis.
 
+## Think Backwards
+
+An LLM outputs whatever logically follows from its input. Due to the personification of instructor-tuned models we tend to speak to them conversationally but this often produces poor results. Instead, think of LLMs like those "what comes next in the sequence" puzzles:
+
+![](https://static.toiimg.com/thumb/msid-105122389,width-400,resizemode-4/105122389.jpg)
+
+A good prompt sketches out the steps of the pattern with minimal distraction surrounding them. This is why examples are so effective for LLMs, they provide evidence of a pattern to extend. Good prompting means thinking backwards from the intended output to produce the most compact set of tokens that will logically lead to it.
+
+## Do One Thing At A Time
+
+Instruction-tuned LLMs struggle with open problem descriptions. More capable models can deal with more ambiguity but the best results come from extremely clear problem specification (much like the real world).
+
+```
+What is a novel theory in the field of psychology?
+```
+
+🙅 This is a pretty bad question, even for a person. What answer are you expecting for this? 
+
+```
+Find a recent psychology literative review
+---
+Describe 5 of the the promising areas of investigation identified in a short paragraph, mentioning the original article title and author
+---
+Suggest 5 ways these areas of investigation could be related to one another, are there opportunities for collaboration?
+---
+Formulate each suggestion into a research question (AKA hypothesis)
+```
+
+👍 This is a textual program that generates text, not a question.
+
+## E2E Interface Generation Example (Context Manipulation)
+
+It can be helpful to throw away the context mid-generation and tightly manipulate it through many passes. For example, let's make an app for this request:
+
+> "I want a todo application that lets me add due dates"
+
+![alt text](image-1.png)
+
+The [full script](./example-app.md) is available, but the general steps are:
+
+1. Generate Domain Model from description
+1. Generate data API from domain model
+1. Improve description by considering UI/UX implementation
+1. Plan full-app build using UI + description + data API
+1. Implement the plan
+1. Check the app for errors, ensure it meets the specification
+
 ## Using LLMs to create structured data
 
-
+https://github.com/instructor-ai/instructor-js
 
 # Tools and techniques
 
