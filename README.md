@@ -1,6 +1,6 @@
 # Generative UI Playbook 
 
-Authors: Gordon Brander
+Authors: Gordon Brander, Ben Follington
 
 A collection of theories, patterns, tricks, and intuitions about generative UI. Begins with high-level theory, and works its way down to pragmatic notes on practice.
 
