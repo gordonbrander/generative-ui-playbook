@@ -24,11 +24,11 @@ Examples of emergence:
 
 Required ingredients for emergence:
 
-- Mechanisms (building blocks, modules, subassemblies), that up the “stuff” of the system
-- Rules (or interfaces), defining how mechanisms are combined
+- Mechanisms, building blocks, modules, subassemblies, that make up the “stuff” of the system.
+- Rules, defining how mechanisms are combined.
 - Feedback, where the next step is the recursive function of new information plus the sum of all previous steps.
 
-In some some sense, emergence is just the product of these ingredients. There are no extra “hidden” variables. Yet, unlike most systems, the whole is *not* reducible to the sum of the parts. That’s because emergent systems have a “state”, or “memory” that builds up via feedback within their environment. The particular history of the system is the irreducible “magic” ingredient that generates emergent behavior.
+In some some sense, emergence is just the product of these ingredients. There are no extra “hidden” variables. But emergence is not *reducible* to the sum of these parts. That’s because emergent systems have a “state”, or “memory” that builds up through feedback with their environment. The particular history of a system is the irreducible “magic” ingredient that generates emergent behavior.
 
 > Emergence is above all a product of coupled, context-dependent interactions. Technically these interactions, and the resulting system, are nonlinear. (John H. Holland, 1998, Emergence)
 
@@ -272,6 +272,13 @@ More reading:
 - [Small alphabets](https://gordonbrander.com/pattern/small-alphabets/)
 - [Alphabets of emergence](https://subconscious.substack.com/p/provoking-emergence-with-alphabets)
 
+## Control vs. interest
+
+In general:
+
+1. Putting a lower-bound on quality will restrict _variety_. When all output is “equally interesting”, nothing is interesting. “Information is the difference that makes a difference” (Gregory Bateson). Capping downside caps upside.
+2. Increasing depth _or_ breadth reduces control but increases interest. Minecraft has voxels and finite block types for a reason.
+
 ## 10,000 bowls of oatmeal
 
 A generative system can be emergent, and even open-ended without being interesting. Kate Compton calls this the [10,000 bowls of oatmeal problem](https://galaxykate0.tumblr.com/post/139774965871/so-you-want-to-build-a-generator):
@@ -279,13 +286,6 @@ A generative system can be emergent, and even open-ended without being interesti
 > I can easily generate 10,000 bowls of plain oatmeal, with each oat being in a different position and different orientation, and mathematically speaking they will all be completely unique. But the user will likely just see a lot of oatmeal. (Kate Compton, [So you want to build a generator](https://galaxykate0.tumblr.com/post/139774965871/so-you-want-to-build-a-generator))
 
 What makes a generative system interesting? **Perceptual uniqueness**.  You’ll know it when you see it.
-
-## Control vs. interest
-
-In general:
-
-1. putting a lower-bound on quality will restrict variety. If the output is "always equally interesting" the observer attenuates to it.
-2. Increasing depth _or_ breadth reduces control but increases interest. Minecraft has voxels and finite block types for a reason.
 
 ## Escaping the oatmeal with archetypes
 
