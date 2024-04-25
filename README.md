@@ -408,9 +408,9 @@ Synchronization happens through feedback, so:
 - If the error rate is too high, tighten the feedback loop.
 - If the variety is too low, loosen the feedback loop.
 
-Instead of looking at a generative system and saying “it’s not good enough”, ask “how can I tighten the feedback loop with the user?
+Instead of looking at a generative system and saying “it’s not good enough”, ask “how can I tighten the feedback loop with the user?”
 
-The brilliance of Google’s “10 Blue Links” is that it allows for zero-friction feedback. If we  Google doesn’t have to get it right, it just has to get it right in 10 tries! And if everyone clicks the third link from the top, well, Google can bump it up.
+The brilliance of Google’s “10 blue links” is that it allows for zero-friction feedback. Google doesn’t have to get it right, it just has to get it right in 10 tries! And what if everyone clicks the third link from the top? Well, Google can bump it up.
 
 Imagine if Google only had “I’m Feeling Lucky”? That would be pretty frustrating! Yet this is how most people think about AI and generative systems. “Get it right in one try” will always be unlikely. Instead, try to find a low-friction ways to increase feedback.
 
