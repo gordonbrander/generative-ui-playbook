@@ -368,7 +368,7 @@ When we come to generate the actual physical layout of this town, we might take 
 3. spawn a pond
 4. add rooms to houses by subdividing
 5. replace the point of interest with a molehill
-6. label the house nearesr the point of interest "Jessica's house"
+6. label the house nearest to the point of interest as "Jessica's house"
 
 When the player arrives here, it will seem like this village organically formed, because it did!
 
