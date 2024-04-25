@@ -422,16 +422,36 @@ More reading:
 
 # Working with generative AI
 
-## Designing with LLMs
+## LLMs are computationally shallow
 
-There are a few things to be aware of when working with LLMs:
+That means they aren’t great at deeply recursive reasoning. For example, ask the LLM to close progressively deeper sequences of parenthesis... It will get it right, but at some high depth, it will eventually begin to fail.
 
-**LLMs pay attention to what’s in the context window**. 
+> It’s a pretty typical kind of thing to see in a “precise” situation like this with a neural net (or with machine learning in general). Cases that a human “can solve in a glance” the neural net can solve too. But cases that require doing something “more algorithmic” (e.g. explicitly counting parentheses to see if they’re closed) the neural net tends to somehow be “too computationally shallow” to reliably do. (By the way, even the full current ChatGPT has a hard time correctly matching parentheses in long sequences.) ([What is ChatGPT doing? And why does it work?](https://writings.stephenwolfram.com/2023/02/what-is-chatgpt-doing-and-why-does-it-work/), Stephen Wolfram, 2023)
 
-- Context window
-- Think about what’s in
-- High locality
-- Signal vs. noise
+So, LLMs don’t do well with deeply interdependent logic puzzles, or problems that have a deeply recursive structure.
+
+One way we can deal with this is to “unroll the loop”... to break our deeply recursive problem down into a sequence of steps that can be solved via multi-shot prompting.
+
+Another approach is to farm out the problem. Computations of arbitrary depth? This is exactly what computers good for. So, what if we combined LLMs with other software to get the best of both? It turns out this is exactly what many LLMs do under the hood, farming out computations they’re bad at:
+
+- Calling out [knowledge graphs](https://writings.stephenwolfram.com/2023/01/wolframalpha-as-the-way-to-bring-computational-knowledge-superpowers-to-chatgpt/) to do automated reasoning.
+- Using RAG and function calling to ground responses with search
+- Generating Python code, and then interpreting it, to solve computationally deep problems
+
+Questions:
+
+- LLMs are computationally shallow. How computationally deep is my problem?
+- In what ways might we combine the LLM with other systems to get the best of both?
+
+More reading:
+
+- [What is ChatGPT doing? And why does it work?](https://writings.stephenwolfram.com/2023/02/what-is-chatgpt-doing-and-why-does-it-work/), Stephen Wolfram, 2023
+
+## LLMs pay attention to what’s in the context window
+
+## LLMs work best with high-locality
+
+Avoid action at a distance.
 
 ## Text is composable, so just use text
 
