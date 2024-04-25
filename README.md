@@ -501,14 +501,36 @@ Another way to see LLMs is as creative tools, like
 
 ## LLM as Artificial Intuition
 
-LLMs are more like intuition than intelligence.
+LLMs are more like Artificial Intuition than Artificial Intelligence. 
 
-- Vibes-based computing
-- Software is getting softer
+Reasoning has a deep, recursive shape. LLMs are computationally shallow. An LLM guesses-next-token by assembling good candidates from a massive hyperdimensional field of associations, their model. 
+
+Reasoning is deep, LLMs are broad.
+
+What else has this shape? Intuition. Our intuitions are shaped by our experience. Our unconscious draws from these impressions, assembling related impressions together to produce a gut feeling, or an insight, or a dream.
+
+So, we taught computers to do vibes. And vibes are most of what we’re doing when we think, too. The reasoning part of our brain is an aftermarket part, bolted on to our ancient intuition.
+
+What LLMs are likely to be good at:
+
+- Vibes
+- Common sense
+- Turning fuzzy impressions into concrete statements
+- Understanding the gist of things (summarization)
+
+Questions:
+
+- Is my problem broad or deep?
+- What might be better solved by intuition than reasoning?
+
+Software is getting softer.
 
 More reading:
 
 - [Artificial Intuition, not Artificial Intelligence](https://subconscious.substack.com/p/artificial-intuition-not-artificial)
+- [The Kekule Problem](https://nautil.us/the-kekul-problem-236574/), Cormac McCarthy, 2017
+- [Echopraxia](https://www.amazon.com/Echopraxia-Peter-Watts/dp/0765328038), Peter Watts, 2015
+- [The Origins of Wealth](https://www.amazon.com/Origin-Wealth-Remaking-Economics-Business/dp/1422121038),  Eric D. Beinhocker, 2007
 
 ## LLM as coordinator
 
