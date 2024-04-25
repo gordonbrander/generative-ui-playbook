@@ -595,7 +595,107 @@ https://github.com/instructor-ai/instructor-js
 
 ## State machines
 
+## Procedural Geometry
+
+### Noise and Randomness
+
+(psuedo)randomness is the fundamental starting point for any computational process relying on variety. Mixing multiple types of noise together at different scales and parameterising them is a common way to disguise the obvious patterns of algorithmic noise.
+
+![White Noise: per pixel randomness](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/White-noise-mv255-240x180.png/220px-White-noise-mv255-240x180.png)
+
+<img alt="Perlin Noise" src="https://upload.wikimedia.org/wikipedia/commons/8/88/Perlin_noise_example.png" width=320 >
+
+![Octave Perlin Noise](https://www.researchgate.net/publication/352678572/figure/fig4/AS:1037741269737474@1624428207473/An-example-noise-image-generated-from-Perlin-noises-with-different-noise-frequencies-and.ppm)
+
+![Worley or Voronoi Noise](https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Worley.jpg/400px-Worley.jpg)
+
+### Wave Function Collapse
+
+WFC is effectively playing Sudoku to generate a grid-based output. First tiles are placed at random, which reduces the pool of valid tiles that can be placed next to them. If there is only one valid possibility for a space, we can safely lock it in which continues to "collapse" the wave function iteratively across the grid. Depending on the tileset it may not deterministically find a full solution.
+
+![](https://bfnightly.bracketproductions.com/c33-s14.gif)
+
+![](https://images1.uwa4d.com/solution/screenshot/5b565d7ad7f10a201fd954cf/thumbnail.gif)
+
+This video provides an excellent overview of the technique in practice and the sharp edges you might bump into: https://www.youtube.com/watch?v=zIRTOgfsjl0
+
+### Signed Distance Fields
+
+![](https://global.discourse-cdn.com/standard17/uploads/threejs/original/3X/e/a/ea9b814f059fad0b7d1425a14d6e868e1124bca2.gif)
+
+[SDF](https://en.wikipedia.org/wiki/Signed_distance_function) geometry discards the classic vertex, edge, face structure of a mesh and renders geometry using a mathematical functions to describe the volume. 
+
+This allows for far deeper control over shape generation and deeply parametric design. Tools like [womp](https://womp.com/index) and people like [Inigo Quilez](https://iquilezles.org/articles/distfunctions/) (of Pixar fame) are pushing this as the next-generation approach. 
+
+SDFs are also finding use in [parametric font-rendering](https://www.youtube.com/watch?v=SO83KQuuZvg). Importantly, SDFs can be re-topologized to mesh based geometry if needed. 
+
+## Parametric Design & Geometry Nodes
+
+Houdini, Blender, Grasshopper Rhino
+https://cuttle.xyz
+
 ## Generative grammars
+
+https://tracery.io/
+
+## Markov Chains
+
+> A Markov chain or Markov process is a stochastic model describing a sequence of possible events in which the probability of each event depends only on the state attained in the previous event.
+
+![](https://miro.medium.com/v2/resize:fit:1200/1*zUYHEsETFS3yMoxc6vVLcg.gif)
+
+While primitive, Markov chains can be significantly simpler, faster and funnier than other techniques and have been used to great effect in games like Caves of Qud.
+
+https://motion.cs.umn.edu/pub/NateBuckThesis/NathanielBuck_ProceduralContent.pdf
+
+## L-Systems
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Fractal_weeds.jpg/660px-Fractal_weeds.jpg)
+
+> An L-system or Lindenmayer system is a parallel rewriting system and a type of formal grammar. An L-system consists of an alphabet of symbols that can be used to make strings, a collection of production rules that expand each symbol into some larger string of symbols, an initial "axiom" string from which to begin construction, and a mechanism for translating the generated strings into geometric structures.
+
+They happen to be excellent at generation branching structures, like plants.
+
+```
+Lindenmayer's original L-system for modelling the growth of algae.
+
+variables : A B
+constants : none
+axiom  : A
+rules  : (A → AB), (B → A)
+which produces:
+
+n = 0 : A
+n = 1 : AB
+n = 2 : ABA
+n = 3 : ABAAB
+n = 4 : ABAABABA
+n = 5 : ABAABABAABAAB
+n = 6 : ABAABABAABAABABAABABA
+n = 7 : ABAABABAABAABABAABABAABAABABAABAAB
+```
+
+## Cellular Automata
+
+![](https://upload.wikimedia.org/wikipedia/commons/e/e5/Gospers_glider_gun.gif)
+
+> A cellular automaton consists of a regular grid of cells, each in one of a finite number of states, such as on and off (in contrast to a coupled map lattice). The grid can be in any finite number of dimensions. For each cell, a set of cells called its neighborhood is defined relative to the specified cell. An initial state (time t = 0) is selected by assigning a state for each cell. A new generation is created (advancing t by 1), according to some fixed rule (generally, a mathematical function)[3] that determines the new state of each cell in terms of the current state of the cell and the states of the cells in its neighborhood.
+
+CA's are an extremely broad class of algorithm and despite their grid-based definition they can model all sorts of dynamics. Stephen Wolfram famously laid claim to them and sketched out a vision for their importance in his book [A New Kind of Science](https://www.wolframscience.com/nks/).
+
+## Continuous Cellular Automata
+
+Rather than storing discrete quantities in each grid cell, we _could_ store continuous floating point values and even store multiple different quantities in each cell. This approach is, approximately, how most compute shader simulations work:
+
+![Reaction Diffusion](https://i.pinimg.com/originals/ad/3d/7c/ad3d7c7ee72c4bcea4e046e0dbf547f8.gif)
+![Differential Growth](https://n-e-r-v-o-u-s.com/blog/wp-content/uploads/2015/06/colors.gif)
+![Navier-Stokes](https://www.karlsims.com/flow-jets.gif)
+![Boids](https://miro.medium.com/v2/resize:fit:1400/1*yIBh1VALCOGlgZxxQfAUdg.gif)
+![Slime Mould](https://payload.cargocollective.com/1/18/598881/13800048/explosion.gif)
+![Lenia](https://hegl.mathi.uni-heidelberg.de/wp-content/uploads/2023/04/example_increasing_mass.gif)
+![Lenia](https://upload.wikimedia.org/wikipedia/commons/7/72/Peek_2021-10-12_22-29.gif)
+
+This is an active research frontier, especially beyond 2D, see the work of [Sage Jensen](https://n-e-r-v-o-u-s.com/blog/?p=9137).
 
 ## LLMs
 
