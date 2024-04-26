@@ -168,6 +168,23 @@ When observing an ecosystem, ask:
 - How is the variety generated?
 - Variety is limited by inputs. Where are the inputs? What limits them?
 
+# Chomsky Hierarchy
+
+Noam Chomsky famously has a theory that language is reducible to a kind of structured grammar. Maybe he’s right, maybe not. Regardless, a lot of the theoretical underpinnings he developed are tremendously useful when reasoning about grammatical systems... any system with a kit of parts and rules for combining them.
+
+The [Chomsky hierarchy of languages](https://en.wikipedia.org/wiki/Chomsky_hierarchy) became a fundamental underpinning of formal language theory and computer science. It is used to reason about everything from parsers to regular expressions.
+
+It states that four different classes of formal grammars exist, which can generate increasingly complex language:
+
+1. Regular (simplest)
+2. Context-free
+3. Context-sensitive
+4. Recursively enumerable (most complex)
+
+Each subsequent class can generate the language of all simpler classes, plus more.
+
+This way of reasoning about grammar systems is useful for more than just language, and can be applied to many kinds of generative system that include modularity, hierarchy, and variety (for example, see “Generative Grammars” below).
+
 # Generative systems in practice
 
 ## Find the building blocks
@@ -673,7 +690,43 @@ https://cuttle.xyz
 
 ## Generative grammars
 
-https://tracery.io/
+Generative grammars borrows insights from the [Chomsky Hierarchy](https://en.wikipedia.org/wiki/Chomsky_hierarchy), to create a recursively-enumerable grammar that can be expanded into random-yet-structured output.
+
+Generative grammars are simple to implement. The core of a generative grammar can be written [in just a few lines of code](https://github.com/gordonbrander/spandrel/blob/main/spandrel.js).
+
+The core of a generative grammar is a map of keys to lists of values:
+
+```
+{
+  "name": ["Brittany", "Andrew"],
+  "animal": ["wombat", "cat"],
+  "story": [
+    "This is a story about #name# the #animal.capitalize#",
+    "This is a tale about a #animal# named #name#"
+  ]
+}
+```
+
+Each time the interpreter encounters a `#tag#`, it selects a random value from the corresponding key in the map. This happens recursively, until there are no more keys to replace.
+
+The random-yet-hierarchically-structured recursive shape of generative grammars is useful for a lot of different generating tasks, including generating stories, combining ingredients for a recipe, creating collections of starting equipment for a game...
+
+Generative grammars also easy to author. They provide a nice balance of randomness, structure, and authorial control. You can even weight randomness by including the same option multiple times in a list. It’s fairly easy to produce generators which are “good a lot”.
+
+Generative grammars aren’t limited to text. You can have them generate markup,  JSON, file paths to image assets, etc.
+
+There may also be interesting ways to use generative grammars in tandem with LLMs. Generative grammars are stricter about structure, but also “dumber” than LLMs, while LLMs are better at doing common sense things, and “soft” things.
+
+- Use a generative grammar to generate input for an LLM, then have the LLM expand that into natural language, or something else.
+- Use an LLM to generate a grammar.
+- Use a grammar to structure “soft” outputs from an LLM.
+
+More reading:
+
+- [Tracery](https://tracery.io/), Kate Compton
+- [Practical procedural generation for everyone](https://www.gdcvault.com/play/1024213/Practical-Procedural-Generation-for), Kate Compton
+- [So you want to build a generator](https://www.tumblr.com/galaxykate0/139774965871/so-you-want-to-build-a-generator), Kate Compton
+
 
 ## Markov Chains
 
