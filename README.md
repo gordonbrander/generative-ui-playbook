@@ -107,6 +107,23 @@ Each level has path-dependencies on the levels beneath. Lower levels constrain h
 
 The most powerful generative systems enable composition at multiple levels. This allows for great expressive power across different kinds of meanings, at multiple levels of complexity.
 
+## Chomsky Hierarchy
+
+Noam Chomsky famously has a theory that language is reducible to a kind of structured grammar. Maybe he’s right, maybe not. Regardless, a lot of the theoretical underpinnings he developed are tremendously useful when reasoning about grammatical systems... any system with a kit of parts and rules for combining them.
+
+The [Chomsky hierarchy of languages](https://en.wikipedia.org/wiki/Chomsky_hierarchy) became a fundamental underpinning of formal language theory and computer science. It is used to reason about everything from parsers to regular expressions.
+
+It states that four different classes of formal grammars exist, which can generate increasingly complex language:
+
+1. Regular (simplest)
+2. Context-free
+3. Context-sensitive
+4. Recursively enumerable (most complex)
+
+Each subsequent class can generate the language of all simpler classes, plus more.
+
+This way of reasoning about grammar systems is useful for more than just language, and can be applied to many kinds of generative system that include modularity, hierarchy, and variety (for example, see “Generative Grammars” below).
+
 ## Combinatorial space
 
 Combinatorial space maps the possible states of a system as a landscape. This way of seeing can be applied to many systems. Evolutionary biologists think of the possibility space of traits as a [fitness landscape](https://en.wikipedia.org/wiki/Fitness_landscape), or the possibility space of phenotypes as a [morphospace](https://www.cambridge.org/core/books/abs/geometry-of-evolution/concept-of-the-theoretical-morphospace/3361BD3C95773CC970DCA25F01C0C7D8). AI researchers can think of the loss function of an algorithm as a [loss landscape](https://losslandscape.com/).
@@ -167,23 +184,6 @@ When observing an ecosystem, ask:
 - Who has the most variety?
 - How is the variety generated?
 - Variety is limited by inputs. Where are the inputs? What limits them?
-
-## Chomsky Hierarchy
-
-Noam Chomsky famously has a theory that language is reducible to a kind of structured grammar. Maybe he’s right, maybe not. Regardless, a lot of the theoretical underpinnings he developed are tremendously useful when reasoning about grammatical systems... any system with a kit of parts and rules for combining them.
-
-The [Chomsky hierarchy of languages](https://en.wikipedia.org/wiki/Chomsky_hierarchy) became a fundamental underpinning of formal language theory and computer science. It is used to reason about everything from parsers to regular expressions.
-
-It states that four different classes of formal grammars exist, which can generate increasingly complex language:
-
-1. Regular (simplest)
-2. Context-free
-3. Context-sensitive
-4. Recursively enumerable (most complex)
-
-Each subsequent class can generate the language of all simpler classes, plus more.
-
-This way of reasoning about grammar systems is useful for more than just language, and can be applied to many kinds of generative system that include modularity, hierarchy, and variety (for example, see “Generative Grammars” below).
 
 # Generative systems in practice
 
