@@ -168,7 +168,7 @@ When observing an ecosystem, ask:
 - How is the variety generated?
 - Variety is limited by inputs. Where are the inputs? What limits them?
 
-# Chomsky Hierarchy
+## Chomsky Hierarchy
 
 Noam Chomsky famously has a theory that language is reducible to a kind of structured grammar. Maybe he’s right, maybe not. Regardless, a lot of the theoretical underpinnings he developed are tremendously useful when reasoning about grammatical systems... any system with a kit of parts and rules for combining them.
 
