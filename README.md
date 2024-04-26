@@ -690,9 +690,7 @@ https://cuttle.xyz
 
 ## Generative grammars
 
-Generative grammars borrows insights from the [Chomsky Hierarchy](https://en.wikipedia.org/wiki/Chomsky_hierarchy), to create a recursively-enumerable grammar that can be expanded into random-yet-structured output.
-
-Generative grammars are simple to implement. The core of a generative grammar can be written [in just a few lines of code](https://github.com/gordonbrander/spandrel/blob/main/spandrel.js).
+Generative grammars borrow insights from [the Chomsky hierarchy](https://en.wikipedia.org/wiki/Chomsky_hierarchy), to create a recursively-enumerable grammar that can be expanded into random-yet-structured output.
 
 The core of a generative grammar is a map of keys to lists of values:
 
@@ -711,11 +709,13 @@ Each time the interpreter encounters a `#tag#`, it selects a random value from t
 
 The random-yet-hierarchically-structured recursive shape of generative grammars is useful for a lot of different generating tasks, including generating stories, combining ingredients for a recipe, creating collections of starting equipment for a game...
 
-Generative grammars also easy to author. They provide a nice balance of randomness, structure, and authorial control. You can even weight randomness by including the same option multiple times in a list. It’s fairly easy to produce generators which are “good a lot”.
+Generative grammars hit a sweet spot for simple and expressive:
 
-Generative grammars aren’t limited to text. You can have them generate markup,  JSON, file paths to image assets, etc.
+- Generative grammars are easy to implement. A basic implementation can be written [in just a few lines of code](https://github.com/gordonbrander/spandrel/blob/main/spandrel.js).
+- Generative grammars are also easy to author. They provide a nice balance of randomness, structure, and authorial control. You can even weight randomness by including the same option multiple times in a list. It’s fairly easy to produce generators which are “good a lot”.
+- Generative grammars aren’t limited to text. You can have them generate markup,  JSON, file paths to image assets, etc.
 
-There may also be interesting ways to use generative grammars in tandem with LLMs. Generative grammars are stricter about structure, but also “dumber” than LLMs, while LLMs are better at doing common sense things, and “soft” things.
+There might also be interesting ways to use generative grammars in tandem with LLMs. Generative grammars are stricter about structure, but also “dumber” than LLMs, while LLMs are better at doing common sense things, and “soft” things.
 
 - Use a generative grammar to generate input for an LLM, then have the LLM expand that into natural language, or something else.
 - Use an LLM to generate a grammar.
