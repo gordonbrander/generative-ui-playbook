@@ -351,6 +351,16 @@ More reading:
 - [Evolutionary Design by Computers](https://www.amazon.com/Evolutionary-Design-Computers-Peter-Bentley/dp/155860605X).
 - [Creative Evolutionary Systems](https://www.amazon.com/Creative-Evolutionary-Kaufmann-Artificial-Intelligence/dp/1558606734)
 
+## Excavating fine-grained mechanisms
+
+You can often start with a coarse-grained set of generative components, and progressively excavate finer-grained components over time. This approach can have advantages:
+
+- You can make progress quickly in the beginning by “black-boxing” certain complex components
+- You can uncover finer-grained alphabets as your generative algorithms get smarter/improve in quality
+- It can help nudge you toward [layered API designs](https://subconscious.substack.com/p/layered-protocols) and alphabets that compose at multiple scales.
+
+Think of this like blocking out large portions of a canvas while painting. You paint large swaths with a wide brush before moving on to the details.
+
 ## Abstract peak to concrete valley (progressive refinement)
 
 Many procedural generation systems fail because they attempt too much in a single step. Dwarf Fortress generates an world with a [complete historical record](https://dwarffortresswiki.org/index.php/World_generation#History_length) and does so by _simulating the entire thing_ (with some smoke and mirrors). 
