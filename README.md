@@ -361,6 +361,10 @@ You can often start with a coarse-grained set of generative components, and prog
 
 Think of this like blocking out large portions of a canvas while painting. You paint large swaths with a wide brush before moving on to the details.
 
+One IRL example of mechanism excavation is [The Extensible Web Manifesto](https://github.com/extensibleweb/manifesto), which seeks to “explain existing and new features in terms of low-level capabilities”.
+
+Note that there are also tradeoffs in becoming extremely fine-grained. As the system becomes more expressive, it shifts requisite variety away from the system and toward developers. This increases open-endedness, sacrifices the system’s ability to control certain properties. For example, on the web, we see this manifest as complaints about JavaScript bundle size (which is the other side of the tradeoff of providing many fine-grained mechanisms rather than coarse-grained platform components). Know where you want the system to uphold guarantees, and consider coarse-graining those portions to keep the requisite variety on the system’s side.
+
 ## Abstract peak to concrete valley (progressive refinement)
 
 Many procedural generation systems fail because they attempt too much in a single step. Dwarf Fortress generates an world with a [complete historical record](https://dwarffortresswiki.org/index.php/World_generation#History_length) and does so by _simulating the entire thing_ (with some smoke and mirrors). 
