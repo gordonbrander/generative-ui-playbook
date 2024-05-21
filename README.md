@@ -482,7 +482,22 @@ More reading:
 
 ## LLMs work best with high-locality
 
-Avoid action at a distance.
+> You may not like it, but this code has high locality of behavior. I don’t have to jump through other functions and files to understand it. [@housecor](https://x.com/housecor/status/1718305190716010801?s=20)
+
+<img src="F9c83O4XEAAZ0bA.jpeg" width="400" />
+
+- LLMs only see what's in the context window and their training data
+- LLMs don't do well reasoning about deeply recursive processes.
+- LLMs see surface complexity and correlate high-dimensional processes.
+
+An LLM is more likely to be effective at generating code with high locality vs a complex class, where the program execution flow is indirect and threaded throughout class methods, with implicit state mutation, overriding via inheritance, etc. So:
+
+- DONT: action at a distance.
+- DONT: separation of concerns
+- DO: group related things together
+- DO: maximally direct code
+- DO: avoid indirection
+- DO: encapsulate code
 
 ## Text is composable, so just use text
 
